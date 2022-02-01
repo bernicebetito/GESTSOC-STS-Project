@@ -1,0 +1,134 @@
+#graph-area {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 80%;
+    grid-row-gap: 5%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3B569B;
+}
+.graph-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#graph-title {
+    font-family: "Poppins";
+    font-size: 50px;
+    color: #8094C5;
+}
+
+#graph {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(112, auto);
+    grid-column-gap: 4%;
+    height: 90%;
+    width: 100%;
+    margin: 0 10%;
+}
+
+/*----- Bar -----*/
+[class*="bar"] {
+    grid-row-end: 111;
+    background-color: #FFFFFF;
+}
+.bar-1-num, .bar-2-num,
+.bar-3-num, .bar-4-num,
+.bar-5-num, .bar-6-num,
+.bar-7-num, .bar-8-num {
+    grid-row: 111 / 112;
+    border-radius: 0px 0px 5px 5px;
+}
+
+[class^="bar"][class$="top"] {
+    border-radius: 5px 5px 0px 0px;
+    background-color: #191919;
+}
+
+/*----- Bar #1 -----*/
+.bar-1-top {
+    grid-row: 1 / 80;
+}
+.bar-1-bottom {
+    grid-row: 80 / 111;
+}
+
+/*----- Bar #2 -----*/
+.bar-2-top {
+    grid-row: 1 / 82;
+}
+.bar-2-bottom {
+    grid-row: 82 / 111;
+}
+
+/*----- Bar #3 -----*/
+.bar-3-top {
+    grid-row: 1 / 85;
+}
+.bar-3-bottom {
+    grid-row: 85 / 111;
+}
+
+/*----- Bar #4 -----*/
+.bar-4-top {
+    grid-row: 1 / 88;
+}
+.bar-4-bottom {
+    grid-row: 88 / 111;
+}
+
+/*----- Bar #5 -----*/
+.bar-5-top {
+    grid-row: 1 / 89;
+}
+.bar-5-bottom {
+    grid-row: 89 / 111;
+}
+
+/*----- Bar #6 -----*/
+.bar-6-top {
+    grid-row: 1 / 90;
+}
+.bar-6-bottom {
+    grid-row: 90 / 111;
+}
+
+/*----- Bar #7 -----*/
+.bar-7-top {
+    grid-row: 1 / 92;
+}
+.bar-7-bottom {
+    grid-row: 92 / 111;
+}
+
+/*----- Bar #8 -----*/
+.bar-8-top {
+    grid-row: 1 / 94;
+}
+.bar-8-bottom {
+    grid-row: 94 / 111;
+}
+
+/*----- Percentages -----*/
+.top {
+    position: relative;
+    top: 10%;
+    font-family: "Manjari";
+    font-weight: bolder;
+    font-size: 15px;
+    color: #8094C5;
+}
+
+/*----- Bar # -----*/
+.num {
+    font-size: 25px;
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: bold;
+    color: #8094C5;
+}
