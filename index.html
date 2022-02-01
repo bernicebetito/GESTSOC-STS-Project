@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GESTSOC GROUP 6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3a29ca12f0.js" crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+            font-family: "Poppins";
+            src: url("assets/fonts/Poppins-Bold.ttf");
+        }
+
+        @font-face {
+            font-family: "Manjari";
+            src: url("assets/fonts/Manjari-Thin.ttf");
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*----- Scrollbar -----*/
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #191919;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #191919;
+            border: 2px solid #5973b4;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5973b4;
+            border: 2px solid #191919;
+        }
+
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #3B569B;
+        }
+
+        #intro-problem {
+            background-image: url("assets/img/01.jpg");
+            height: 100%;
+            width: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #intro-problem-content {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            grid-column-gap: 10%;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .intro-prob-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #home-title, #intro-problem-title {
+            max-width: 75%;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-family: "Poppins";
+            font-weight: bolder;
+            font-size: 50px;
+        }
+
+        #intro-problem-desc {
+            max-width: 75%;
+            margin: 0;
+            padding: 0;
+            color: #FFFFFF;
+            font-family: "Manjari";
+            font-size: 40px;
+        }
+
+        #intro-aquaculture {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            grid-column-gap: 10%;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+
+        .intro-aqua-desc-item {
+            margin: 0 15px;
+        }
+
+        #intro-aqua-title-item {
+            grid-column: 1 / span 3;
+        }
+
+        #intro-aqua-title {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            color: #3B569B;
+            font-family: "Poppins";
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        .intro-aqua-desc {
+            margin: 0;
+            padding: 0;
+            color: #3B569B;
+            font-family: "Manjari";
+            font-size: 20px;
+        }
+
+        #graph-area {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 15% 80%;
+            grid-row-gap: 5%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #3B569B;
+        }
+        .graph-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+        }
+
+        #graph-title {
+            font-family: "Poppins";
+            font-size: 50px;
+            color: #8094C5;
+        }
+
+        #graph {
+            display: grid;
+            grid-template-columns: repeat(8, auto);
+            grid-template-rows: repeat(112, auto);
+            grid-column-gap: 4%;
+            height: 90%;
+            width: 100%;
+            margin: 0 10%;
+        }
+
+        /*----- Bar -----*/
+        [class*="bar"] {
+            grid-row-end: 111;
+            background-color: #FFFFFF;
+        }
+        .bar-1-num, .bar-2-num,
+        .bar-3-num, .bar-4-num,
+        .bar-5-num, .bar-6-num,
+        .bar-7-num, .bar-8-num {
+            grid-row: 111 / 112;
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        [class^="bar"][class$="top"] {
+            border-radius: 5px 5px 0px 0px;
+            background-color: #191919;
+        }
+
+        /*----- Bar #1 -----*/
+        .bar-1-top {
+            grid-row: 1 / 80;
+        }
+        .bar-1-bottom {
+            grid-row: 80 / 111;
+        }
+
+        /*----- Bar #2 -----*/
+        .bar-2-top {
+            grid-row: 1 / 82;
+        }
+        .bar-2-bottom {
+            grid-row: 82 / 111;
+        }
+
+        /*----- Bar #3 -----*/
+        .bar-3-top {
+            grid-row: 1 / 85;
+        }
+        .bar-3-bottom {
+            grid-row: 85 / 111;
+        }
+
+        /*----- Bar #4 -----*/
+        .bar-4-top {
+            grid-row: 1 / 88;
+        }
+        .bar-4-bottom {
+            grid-row: 88 / 111;
+        }
+
+        /*----- Bar #5 -----*/
+        .bar-5-top {
+            grid-row: 1 / 89;
+        }
+        .bar-5-bottom {
+            grid-row: 89 / 111;
+        }
+
+        /*----- Bar #6 -----*/
+        .bar-6-top {
+            grid-row: 1 / 90;
+        }
+        .bar-6-bottom {
+            grid-row: 90 / 111;
+        }
+
+        /*----- Bar #7 -----*/
+        .bar-7-top {
+            grid-row: 1 / 92;
+        }
+        .bar-7-bottom {
+            grid-row: 92 / 111;
+        }
+
+        /*----- Bar #8 -----*/
+        .bar-8-top {
+            grid-row: 1 / 94;
+        }
+        .bar-8-bottom {
+            grid-row: 94 / 111;
+        }
+
+        /*----- Percentages -----*/
+        .top {
+            position: relative;
+            top: 10%;
+            font-family: "Manjari";
+            font-weight: bolder;
+            font-size: 15px;
+            color: #ffffff;
+        }
+
+        /*----- Bar # -----*/
+        .num {
+            font-size: 25px;
+            font-family: "Poppins";
+            font-style: italic;
+            font-weight: bold;
+            color: #8094C5;
+        }
+
+        #researchers {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: 25% 25% 15%;
+            grid-template-rows: auto auto auto;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #191919;
+        }
+        #researchers-title-div {
+            grid-row: 1 / span 3;
+            grid-column: 3;
+        }
+        #researchers-title {
+            margin-top: 55%;
+            font-size: 75px;
+            font-family: "Poppins";
+            color: #000000;
+            -webkit-text-stroke: 1px #8094C5;
+            transform: rotate(90deg);
+        }
+        .researchers-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .researchers-name {
+            margin: 3%;
+            padding: 0;
+            text-decoration: none;
+            font-family: "Manjari";
+            color: #FFFFFF;
+        }
+        .researchers-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15%;
+            font-size: 20px;
+            font-family: "Poppins";
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="home">
+        <p id="home-title">Aquaculture as an Aid in Achieving Zero Hunger</p>
+    </div>
+
+    <div id="intro-problem">
+        <div id="intro-problem-content">
+            <div class="intro-prob-item">
+                <p id="intro-problem-title">Problem Title</p>
+            </div>
+            <div class="intro-prob-item">
+                <p id="intro-problem-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum.
+                    Curabitur nec
+                    tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel
+                    vitae
+                    purus.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro-aquaculture">
+        <div class="intro-aqua-desc-item" id="intro-aqua-title-item">
+            <p id="intro-aqua-title">Aquaculture</p>
+        </div>
+        <div class="intro-aqua-desc-item">
+            <p class="intro-aqua-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum. Curabitur nec
+                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel vitae
+                purus.
+            </p>
+        </div>
+        <div class="intro-aqua-desc-item">
+            <p class="intro-aqua-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum. Curabitur nec
+                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel vitae
+                purus.
+            </p>
+        </div>
+        <div class="intro-aqua-desc-item">
+            <p class="intro-aqua-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum. Curabitur nec
+                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel vitae
+                purus.
+            </p>
+        </div>
+    </div>
+
+    <div id="graph-area">
+        <div class="graph-item">
+            <p id="graph-title">Graph of Something</p>
+        </div>
+        <div class="graph-item">
+            <div id="graph">
+                <div class="bar-1-top">
+                </div>
+                <div class="bar-1-bottom">
+                    <div class="top">20%</div>
+                </div>
+                <div class="bar-1-num">
+                    <div class="num">#1</div>
+                </div>
+                <div class="bar-2-top">
+                </div>
+                <div class="bar-2-bottom">
+                    <div class="top">18%</div>
+                </div>
+                <div class="bar-2-num">
+                    <div class="num">#2</div>
+                </div>
+                <div class="bar-3-top">
+                </div>
+                <div class="bar-3-bottom">
+                    <div class="top">15%</div>
+                </div>
+                <div class="bar-3-num">
+                    <div class="num">#3</div>
+                </div>
+                <div class="bar-4-top">
+                </div>
+                <div class="bar-4-bottom">
+                    <div class="top">12%</div>
+                </div>
+                <div class="bar-4-num">
+                    <div class="num">#4</div>
+                </div>
+                <div class="bar-5-top">
+                </div>
+                <div class="bar-5-bottom">
+                    <div class="top">11%</div>
+                </div>
+                <div class="bar-5-num">
+                    <div class="num">#5</div>
+                </div>
+                <div class="bar-6-top">
+                </div>
+                <div class="bar-6-bottom">
+                    <div class="top">10%</div>
+                </div>
+                <div class="bar-6-num">
+                    <div class="num">#6</div>
+                </div>
+                <div class="bar-7-top">
+                </div>
+                <div class="bar-7-bottom">
+                    <div class="top">8%</div>
+                </div>
+                <div class="bar-7-num">
+                    <div class="num">#7</div>
+                </div>
+                <div class="bar-8-top">
+                </div>
+                <div class="bar-8-bottom">
+                    <div class="top">6%</div>
+                </div>
+                <div class="bar-8-num">
+                    <div class="num">#8</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="researchers">
+        <div class="researchers-item">
+            <img class="researchers-img" src="assets/img/02.JPG">
+            <a class="researchers-name" href="#">Lorem Ipsum</a>
+        </div>
+        <div class="researchers-item">
+            <img class="researchers-img" src="assets/img/03.JPG">
+            <a class="researchers-name" href="#">Lorem Ipsum</a>
+        </div>
+        <div class="researchers-item">
+            <a class="researchers-name" href="#">Lorem Ipsum</a>
+        </div>
+        <div class="researchers-item">
+            <a class="researchers-name" href="#">Lorem Ipsum</a>
+        </div>
+        <div class="researchers-item">
+            <a class="researchers-name" href="#">Lorem Ipsum</a>
+        </div>
+        <div class="researchers-item">
+            <a class="researchers-name" href="#">Lorem Ipsum</a>
+        </div>
+        <div class="researchers-item" id="researchers-title-div">
+            <p id="researchers-title">Researchers</p>
+        </div>
+    </div>
+
+    <footer>
+        GESTSOC STS Project: Technological Solution
+    </footer>
+
+</body>
+
+</html>
