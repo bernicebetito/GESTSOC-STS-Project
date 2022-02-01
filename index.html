@@ -25,6 +25,7 @@
             width: 100%;
             margin: 0;
             padding: 0;
+            background-color: #000000;
         }
 
         /*----- Scrollbar -----*/
@@ -56,7 +57,7 @@
             background-color: #3B569B;
         }
 
-        #intro-problem {
+        #intro-aquaculture {
             background-image: url("assets/img/01.jpg");
             height: 100%;
             width: 100%;
@@ -66,7 +67,7 @@
             background-size: cover;
         }
 
-        #intro-problem-content {
+        #intro-aquaculture-content {
             display: grid;
             grid-template-columns: 45% 45%;
             grid-column-gap: 10%;
@@ -75,7 +76,7 @@
             margin: 0;
             padding: 0;
         }
-        .intro-prob-item {
+        .intro-aqua-item {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -85,7 +86,7 @@
             text-align: center;
         }
 
-        #home-title, #intro-problem-title {
+        #home-title, #intro-aqua-title {
             max-width: 75%;
             margin: 0;
             padding: 0;
@@ -96,7 +97,7 @@
             font-size: 50px;
         }
 
-        #intro-problem-desc {
+        #intro-aqua-desc {
             max-width: 75%;
             margin: 0;
             padding: 0;
@@ -105,7 +106,7 @@
             font-size: 40px;
         }
 
-        #intro-aquaculture {
+        #intro-problem {
             display: grid;
             grid-template-columns: auto auto auto;
             grid-template-rows: auto auto;
@@ -120,15 +121,15 @@
             background-color: #FFFFFF;
         }
 
-        .intro-aqua-desc-item {
+        .intro-prob-desc-item {
             margin: 0 15px;
         }
 
-        #intro-aqua-title-item {
+        #intro-prob-title-item {
             grid-column: 1 / span 3;
         }
 
-        #intro-aqua-title {
+        #intro-prob-title {
             margin: 0;
             padding: 0;
             text-transform: uppercase;
@@ -137,7 +138,7 @@
             font-weight: bolder;
             font-size: 50px;
         }
-        .intro-aqua-desc {
+        .intro-prob-desc {
             margin: 0;
             padding: 0;
             color: #3B569B;
@@ -268,7 +269,7 @@
             font-family: "Manjari";
             font-weight: bolder;
             font-size: 15px;
-            color: #ffffff;
+            color: #8094C5;
         }
 
         /*----- Bar # -----*/
@@ -309,19 +310,31 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            text-decoration: none;
         }
         .researchers-name {
             margin: 3%;
             padding: 0;
-            text-decoration: none;
             font-family: "Manjari";
             color: #FFFFFF;
+            transition: 0.5s;
         }
         .researchers-img {
             width: 100px;
             height: 100px;
             object-fit: cover;
             border-radius: 50%;
+            transition: 0.5s;
+        }
+        .researchers-item:hover .researchers-img {
+            width: 105px;
+            height: 105px;
+            transition: 0.5s;
+        }
+        .researchers-item:hover .researchers-name {
+            color: #8094C5;
+            font-size: 18px;
+            transition: 0.5s;
         }
 
         footer {
@@ -344,12 +357,45 @@
     </div>
 
     <div id="intro-problem">
-        <div id="intro-problem-content">
-            <div class="intro-prob-item">
-                <p id="intro-problem-title">Problem Title</p>
+        <div class="intro-prob-desc-item" id="intro-prob-title-item">
+            <p id="intro-prob-title">Problem Title</p>
+        </div>
+        <div class="intro-prob-desc-item">
+            <p class="intro-prob-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum.
+                Curabitur nec
+                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel
+                vitae
+                purus.
+            </p>
+        </div>
+        <div class="intro-prob-desc-item">
+            <p class="intro-prob-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum.
+                Curabitur nec
+                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel
+                vitae
+                purus.
+            </p>
+        </div>
+        <div class="intro-prob-desc-item">
+            <p class="intro-prob-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum.
+                Curabitur nec
+                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel
+                vitae
+                purus.
+            </p>
+        </div>
+    </div>
+
+    <div id="intro-aquaculture">
+        <div id="intro-aquaculture-content">
+            <div class="intro-aqua-item">
+                <p id="intro-aqua-title">Aquaculture</p>
             </div>
-            <div class="intro-prob-item">
-                <p id="intro-problem-desc">
+            <div class="intro-aqua-item">
+                <p id="intro-aqua-desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum.
                     Curabitur nec
                     tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel
@@ -357,33 +403,6 @@
                     purus.
                 </p>
             </div>
-        </div>
-    </div>
-
-    <div id="intro-aquaculture">
-        <div class="intro-aqua-desc-item" id="intro-aqua-title-item">
-            <p id="intro-aqua-title">Aquaculture</p>
-        </div>
-        <div class="intro-aqua-desc-item">
-            <p class="intro-aqua-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum. Curabitur nec
-                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel vitae
-                purus.
-            </p>
-        </div>
-        <div class="intro-aqua-desc-item">
-            <p class="intro-aqua-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum. Curabitur nec
-                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel vitae
-                purus.
-            </p>
-        </div>
-        <div class="intro-aqua-desc-item">
-            <p class="intro-aqua-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet odio ac enim congue interdum. Curabitur nec
-                tellus sapien. Proin eu ligula orci. Quisque at vehicula mi. Praesent sed ligula nec erat accumsan porta vel vitae
-                purus.
-            </p>
         </div>
     </div>
 
@@ -462,33 +481,37 @@
     </div>
 
     <div id="researchers">
-        <div class="researchers-item">
+        <a class="researchers-item" href="#">
             <img class="researchers-img" src="assets/img/02.JPG">
-            <a class="researchers-name" href="#">Lorem Ipsum</a>
-        </div>
-        <div class="researchers-item">
+            <p class="researchers-name">Lorem Ipsum</p>
+        </a>
+        <a class="researchers-item" href="#">
             <img class="researchers-img" src="assets/img/03.JPG">
-            <a class="researchers-name" href="#">Lorem Ipsum</a>
-        </div>
-        <div class="researchers-item">
-            <a class="researchers-name" href="#">Lorem Ipsum</a>
-        </div>
-        <div class="researchers-item">
-            <a class="researchers-name" href="#">Lorem Ipsum</a>
-        </div>
-        <div class="researchers-item">
-            <a class="researchers-name" href="#">Lorem Ipsum</a>
-        </div>
-        <div class="researchers-item">
-            <a class="researchers-name" href="#">Lorem Ipsum</a>
-        </div>
+            <p class="researchers-name">Lorem Ipsum</p>
+        </a>
+        <a class="researchers-item" href="#">
+            <img class="researchers-img" src="assets/img/02.JPG">
+            <p class="researchers-name">Lorem Ipsum</p>
+        </a>
+        <a class="researchers-item" href="#">
+            <img class="researchers-img" src="assets/img/03.JPG">
+            <p class="researchers-name">Lorem Ipsum</p>
+        </a>
+        <a class="researchers-item" href="#">
+            <img class="researchers-img" src="assets/img/02.JPG">
+            <p class="researchers-name">Lorem Ipsum</p>
+        </a>
+        <a class="researchers-item" href="#">
+            <img class="researchers-img" src="assets/img/03.JPG">
+            <p class="researchers-name">Lorem Ipsum</p>
+        </a>
         <div class="researchers-item" id="researchers-title-div">
             <p id="researchers-title">Researchers</p>
         </div>
     </div>
 
     <footer>
-        GESTSOC STS Project: Technological Solution
+        GESTSOC - Y12&emsp;Group 6&emsp;STS Project
     </footer>
 
 </body>
