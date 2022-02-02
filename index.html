@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/problem.css">
     <link rel="stylesheet" href="assets/css/aquaculture.css">
@@ -39,15 +43,28 @@
         <a class="sideLink" href="#stock">Stock</a>
         <a class="sideLink" href="#another-parallax">Another Parallax</a>
         <a class="sideLink" href="#researchers">Researchers</a>
+        <p class="sideLink" id="showMenu" onclick="showMenu()">Show Menu</p>
     </div>
 
-    <!--COVER-->
     <div id="sideMenuCover" class="sidenavcover" onclick="closeNav()"></div>
 
     <div id="home">
-        <div id="header-menu" class="headerLink" onclick="openNav()"><i class="fas fa-bars" style="background-color: #3B569B;"></i></div>
         <p class="title">Aquaculture as an Aid in Achieving Zero Hunger</p>
     </div>
+
+    <header id="header">
+        <ul id="header-ul">
+            <li class="header-li"><a class="header-link" href="#home">Home</a></li>
+            <li class="header-li"><a class="header-link" href="#problem">Problem</a></li>
+            <li class="header-li"><a class="header-link" href="#aquaculture">Aquaculture</a></li>
+            <li class="header-li"><a class="header-link" href="#graph-area">Graph of Something</a></li>
+            <li class="header-li"><a class="header-link" href="#stock">Stock</a></li>
+            <li class="header-li"><a class="header-link" href="#another-parallax">Another Parallax</a></li>
+            <li class="header-li"><a class="header-link" href="#researchers">Researchers</a></li>
+            <li class="header-li" id="hideMenu" onclick="hideMenu()">Hide Menu</li>
+        </ul>
+        <div id="sideButton" onclick="openNav()"><i class="fas fa-bars" style="background-color: #ffffff00;"></i></div>
+    </header>
 
     <div id="problem">
         <div class="prob-desc-item" id="prob-title-item">
@@ -224,29 +241,29 @@
     </div>
 
     <div id="researchers">
-        <a class="researchers-item" href="#">
+        <a class="researchers-item" href="https://bernicebetito.github.io">
             <img class="researchers-img" src="assets/img/03.JPG">
-            <p class="researchers-name">Lorem Ipsum</p>
+            <p class="researchers-name">Bernice Betito</p>
         </a>
         <a class="researchers-item" href="#">
             <img class="researchers-img" src="assets/img/04.JPG">
-            <p class="researchers-name">Lorem Ipsum</p>
+            <p class="researchers-name">John Henry Cagaoan</p>
         </a>
         <a class="researchers-item" href="#">
             <img class="researchers-img" src="assets/img/05.JPG">
-            <p class="researchers-name">Lorem Ipsum</p>
+            <p class="researchers-name">Gabriel Marcelo</p>
         </a>
         <a class="researchers-item" href="#">
             <img class="researchers-img" src="assets/img/06.gif">
-            <p class="researchers-name">Lorem Ipsum</p>
+            <p class="researchers-name">Jacob Salazar</p>
         </a>
         <a class="researchers-item" href="#">
             <img class="researchers-img" src="assets/img/03.JPG">
-            <p class="researchers-name">Lorem Ipsum</p>
+            <p class="researchers-name">Luis Valera</p>
         </a>
         <a class="researchers-item" href="#">
             <img class="researchers-img" src="assets/img/04.JPG">
-            <p class="researchers-name">Lorem Ipsum</p>
+            <p class="researchers-name">Abigail Wan</p>
         </a>
         <div class="researchers-item" id="researchers-title-div">
             <p id="researchers-title">Researchers</p>
@@ -269,6 +286,48 @@
     function closeNav() {
         document.getElementById("sideMenuCover").style.width = "0"
         document.getElementById("sideMenu").style.width = "0"
+    }
+
+    window.onscroll = function () { stickyHeader() }
+
+    var header = document.getElementById("header")
+    var header_ul = document.getElementById("header-ul")
+    var header_hide = document.getElementById("hideMenu")
+    var sticky = header.offsetTop;
+
+    var side = document.getElementById("sideButton")
+
+    function stickyHeader() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky")
+
+            if (header_ul.style.fontSize == "17px") {
+                header_hide.style.fontSize = "13px"
+            } else {
+                header_hide.style.fontSize = "0px"
+            }
+        } else {
+            header.classList.remove("sticky")
+            header_hide.style.fontSize = "0px"
+            header.style.backgroundColor = "#f3f3f3"
+            header_ul.style.fontSize = "17px"
+            side.style.fontSize = "0px"
+        }
+    }
+
+    function hideMenu() {
+        header_ul.style.fontSize = "0px"
+        header_hide.style.fontSize = "0px"
+        header.style.backgroundColor = "#ffffff00"
+        side.style.fontSize = "50px"
+    }
+
+    function showMenu() {
+        header.style.backgroundColor = "#f3f3f3"
+        header_ul.style.fontSize = "17px"
+        header_hide.style.fontSize = "13px"
+        side.style.fontSize = "0px"
+        closeNav()
     }
 </script>
 <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>

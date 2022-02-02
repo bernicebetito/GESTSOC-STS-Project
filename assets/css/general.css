@@ -25,24 +25,63 @@ html, body {
 }
 
 /*----- Header Links -----*/
-#header-menu {
-    font-size: 50px;
+header {
+    line-height: 75px;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+    background-color: #f3f3f3;
+    transition: 0.5s;
 }
-.headerLink {
+#header-ul {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    list-style-type: none;
+    transition: 0.25s;
+}
+#hideMenu {
+    float: right;
+    font-size: 0px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.header-li {
+    display: inline-block;
+    font-family: "Poppins";
+    margin: 0 15px;
+}
+.header-link {
+    text-decoration: none;
+    color: #000000;
+    transition: 0.5s;
+}
+.header-link:hover, #hideMenu:hover {
+    color: #5973b4;
+    transition: 0.5s;
+}
+.sticky {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    width: 100%;
+}
+
+/*----- Side Menu -----*/
+#sideButton {
     position: absolute;
     top: 0;
     right: 0;
     padding-right: 5px;
-    color: #FFFFFF;
+    font-size: 0px;
+    color: #7f94ca;
     cursor: pointer;
     transition: 0.5s;
 }
-.headerLink:hover {
-    color: #738ac4;
+#sideButton:hover {
+    color: #5c73ad;
     transition: 0.5s;
 }
-
-/*----- Side Menu -----*/
 #sideMenu {
     position: fixed;
     height: 100%;
@@ -54,6 +93,10 @@ html, body {
     z-index: 5;
     background-color: #FFFFFF;
     color: #191919;
+    transition: 0.5s;
+}
+#showMenu {
+    font-size: 13px;
     transition: 0.5s;
 }
 /*----- Side Menu Background -----*/
