@@ -52,8 +52,8 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    height: 350px;
-    width: 350px;
+    height: 365px;
+    width: 365px;
     background-color: #3B569B;
     border-radius: 15px;
 }
@@ -77,24 +77,17 @@
 
 #stock-slide-4 {
     background-image: url("../img/03.JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 #stock-slide-3 {
     background-image: url("../img/04.JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 #stock-slide-2 {
     background-image: url("../img/05.JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 #stock-slide-1 {
     background-image: url("../img/06.gif");
+}
+[id^="stock-slide-"] {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
