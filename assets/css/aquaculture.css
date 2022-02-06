@@ -1,5 +1,5 @@
 #aquaculture {
-    background-image: url("../img/01.jpg");
+    background-image: url("../img/02.gif");
     height: 100%;
     width: 100%;
     background-attachment: fixed;
@@ -31,5 +31,5 @@
     padding: 0;
     color: #FFFFFF;
     font-family: "Manjari";
-    font-size: 40px;
+    font-size: 35px;
 }
