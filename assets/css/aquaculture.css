@@ -1,11 +1,14 @@
 #aquaculture {
-    background-image: url("../img/02.gif");
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff00;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
 }
 #aquaculture-content {
     display: grid;
@@ -15,6 +18,11 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    background-image: url("../img/02.gif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .aqua-item {
     display: flex;
@@ -32,4 +40,49 @@
     color: #FFFFFF;
     font-family: "Manjari";
     font-size: 35px;
+}
+
+#aqua-outer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#aqua-inner {
+    display: flex;
+    position: relative;
+}
+
+#aqua-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.aqua-slide {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#dot-slide {
+    align-items: flex-end;
+}
+
+.dot {
+    display: inline-flex;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    bottom: 0;
+    margin: 0 2px 10px 2px;
+    background-color: #b8c2dd;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active-dot, .dot:hover {
+    background-color: #738ac4;
 }
