@@ -1,8 +1,4 @@
 #aquaculture {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     background-color: #ffffff00;
     margin: 0;
@@ -49,7 +45,6 @@
 }
 
 #aqua-inner {
-    display: flex;
     position: relative;
 }
 
@@ -58,15 +53,14 @@
 }
 
 .aqua-slide {
-    display: flex;
     position: absolute;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100vw;
 }
 
 #dot-slide {
+    display: flex;
+    justify-content: center;
     align-items: flex-end;
 }
 

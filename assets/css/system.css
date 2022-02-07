@@ -45,3 +45,64 @@
     font-family: "Manjari";
     font-size: 20px;
 }
+
+/*----- Button Div -----*/
+#sys-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    background-color: #3b569b65;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+#sys-button {
+    border: none;
+    font-size: 25px;
+    font-family: "Poppins";
+    padding: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#sys-a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.disable-button {
+    background-color: transparent;
+    color: transparent;
+}
+
+.enable-button {
+    background-color: #19191970;
+    color: #FFFFFF;
+}.enable-button:hover {
+    border: 3px solid #191919;
+    background-color: #191919;
+    color: #3B569B;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
+}
+
+#sys-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+#sys-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}

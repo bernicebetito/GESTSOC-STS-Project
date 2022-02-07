@@ -1,15 +1,28 @@
 $(document).ready(function () {
     var slideIndex = 2
     var slides_timer
+    initSlides()
     setSlidesTimer()
+
+    function initSlides() {
+        var aqua_slides = document.getElementsByClassName("aqua-slide")
+
+        for (i = 0; i < aqua_slides.length; i++) {
+            if (aqua_slides[i].id.toString().indexOf("dot") == -1) {
+                if (!$(aqua_slides[i]).hasClass("active")) {
+                    $("#" + aqua_slides[i].id.toString()).animate({ right: 1500 }, 500)
+                }
+            }
+        }
+    }
 
     function setSlidesTimer() {
         slides_timer = setInterval(function () {
-            if (slideIndex > 3) {
+            if (slideIndex > 4) {
                 slideIndex = 1
             }
             showSlides(slideIndex)
-        }, 5000)
+        }, 15000)
     }
 
     function callSlide(n) {
@@ -55,5 +68,8 @@ $(document).ready(function () {
     });
     $("#dot-3").click(function () {
         callSlide(3)
+    });
+    $("#dot-4").click(function () {
+        callSlide(4)
     });
 });

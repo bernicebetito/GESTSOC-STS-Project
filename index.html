@@ -96,7 +96,7 @@
     <div id="aquaculture">
         <div id="aqua-outer">
             <div id="aqua-inner">
-                <div class="aqua-slide" id="aqua-slide-1">
+                <div class="aqua-slide active" id="aqua-slide-1">
                     <div id="aquaculture-content">
                         <div class="aqua-item">
                             <p class="title">Offshore Aquaculture</p>
@@ -159,21 +159,19 @@
                     </div>
                 </div>
                 
-                <div class="aqua-slide active" id="aqua-slide-3">
+                <div class="aqua-slide" id="aqua-slide-3">
                     <div id="system">
                         <div class="system-desc-item" id="system-title-item">
                             <p id="system-title">Better Aquaculture System</p>
                             <p id="system-sub">Milich and Drimer (2018)</p>
                         </div>
                         <div class="system-desc-item">
-                            <p class="system-desc">
-                                Larger than the previous iteration and at the same time, to further stabilize the system at a submerged
-                                state.
-                                It follows the design principles and the design is analyzed with the AQUASIM software.
-                            </p>
+                            <img src="/assets/img/AQUA-SYSTEM.png" style="width: 300px;">
                         </div>
                         <div class="system-desc-item">
                             <p class="system-desc">
+                                Idea: Larger than the previous iteration and at the same time, to further stabilize the system at a submerged
+                                state.<br><br>
                                 Able to retain its volume above 70% despite the strong currents
                             </p>
                         </div>
@@ -193,10 +191,26 @@
                     </div>
                 </div>
 
+                <div class="aqua-slide" id="aqua-slide-4" onmouseenter="showsys()" onmouseleave="showsys()">
+                    <div style="position: relative;">
+                        <div id="sys-more">
+                            <button id="sys-button" class="disable-button" disabled><a id="sys-a" href="https://youtu.be/aC2IYMVuCF8">GilliOcean Technology</a></button>
+                        </div>
+                        <div id="sys-video">
+                            <iframe
+                                src="https://www.youtube.com/embed/aC2IYMVuCF8?playlist=aC2IYMVuCF8&controls=0&showinfo=0&loop=1&autoplay=1&mute=1"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="aqua-slide" id="dot-slide">
-                    <span id="dot-1" class="dot"></span>
+                    <span id="dot-1" class="dot active-dot"></span>
                     <span id="dot-2" class="dot"></span>
-                    <span id="dot-3" class="dot active-dot"></span>
+                    <span id="dot-3" class="dot"></span>
+                    <span id="dot-4" class="dot"></span>
                 </div>
             </div>
         </div>
@@ -391,6 +405,7 @@
 </body>
 <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/assets/js/menu.js"></script>
+<script type="text/javascript" src="/assets/js/system.js"></script>
 <script type="text/javascript" src="/assets/js/aquaculture.js"></script>
 
 </html>
