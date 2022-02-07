@@ -7,7 +7,7 @@
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #3B569B;
+    background-color: #FFFFFF;
 }
 .chart-item {
     display: flex;
@@ -25,7 +25,7 @@
     padding: 0;
     font-family: "Poppins";
     font-size: 40px;
-    color: #FFFFFF;
+    color: #3B569B;
 }
 #chart-sub {
     margin: 0;
@@ -34,7 +34,7 @@
     font-weight: bolder;
     font-style: italic;
     font-size: 25px;
-    color: #191919;
+    color: #7f94ca;
 }
 
 #chart-1992 {
@@ -44,9 +44,9 @@
     height: 250px;
     border-radius: 50%;
     background-image: conic-gradient(
-        #7f94ca 149deg,
-        #b4c2e4 0 259deg,
-        #ffffff 0
+        #3B569B 149deg,
+        #7f94ca 0 259deg,
+        #b4c2e4 0
     );
 }
 
@@ -57,9 +57,9 @@
     height: 250px;
     border-radius: 50%;
     background-image: conic-gradient(
-        #7f94ca 94deg,
-        #b4c2e4 0 173deg,
-        #ffffff 0
+        #3B569B 94deg,
+        #7f94ca 0 173deg,
+        #b4c2e4 0
     );
 }
 
@@ -70,9 +70,9 @@
     height: 250px;
     border-radius: 50%;
     background-image: conic-gradient(
-        #7f94ca 151deg,
-        #b4c2e4 0 281deg,
-        #ffffff 0
+        #3B569B 151deg,
+        #7f94ca 0 281deg,
+        #b4c2e4 0
     );
 }
 
@@ -89,11 +89,11 @@
     font-size: 20px;
 }
 .chart-legend-1 {
-    color: #7f94ca;
+    color: #3B569B;
 }
 .chart-legend-2 {
-    color: #b4c2e4;
+    color: #7f94ca;
 }
 .chart-legend-3 {
-    color: #ffffff;
+    color: #b4c2e4;
 }
