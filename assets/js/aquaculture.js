@@ -10,7 +10,7 @@ $(document).ready(function () {
         for (i = 0; i < aqua_slides.length; i++) {
             if (aqua_slides[i].id.toString().indexOf("dot") == -1) {
                 if (!$(aqua_slides[i]).hasClass("active")) {
-                    $("#" + aqua_slides[i].id.toString()).animate({ right: 1500 }, 500)
+                    $("#" + aqua_slides[i].id.toString()).animate({ right: 150000 }, 500)
                 }
             }
         }
@@ -48,7 +48,7 @@ $(document).ready(function () {
             if ($(aqua_slides[i]).hasClass("active")) {
                 if (aqua_slides[i].id.toString().indexOf(num.toString()) == -1) {
                     $(aqua_slides[i]).removeClass("active")
-                    $("#" + aqua_slides[i].id.toString()).animate({ right: 1500 }, 500)
+                    $("#" + aqua_slides[i].id.toString()).animate({ right: 150000 }, 500)
                     $("#aqua-slide-" + (num).toString()).addClass("active")
                     $("#aqua-slide-" + (num).toString()).show().css({ right: -($("#aqua-slide-" + (num).toString()).width()) }).animate({ right: 0 })
                     break
